@@ -19,10 +19,10 @@ app.get("/bus/all", (req, res, next) => {
                 return r
             }));
 
-    res.json(myRotte);
+    res.json(myRotte.filter(r=>r.country==='IT'));
 });
 
 
 app.listen(3001, () => {
-    console.log("Server running on port 3000");
+    console.log("Server running on port 3001");
 });
